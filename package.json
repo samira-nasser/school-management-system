@@ -1,0 +1,31 @@
+{
+  "name": "school-management-system",
+  "version": "1.0.0",
+  "description": "School Management System",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samira-nasser/school-management-system.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samira-nasser/school-management-system/issues"
+  },
+  "homepage": "https://github.com/samira-nasser/school-management-system#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.1",
+    "mongoose": "^8.2.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.30",
+    "typescript": "^5.4.3"
+  }
+}
