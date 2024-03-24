@@ -1,13 +1,13 @@
 var validator = require("validator");
 
 exports.checkEmailValidation = (req, res, next) => {
-  let Email = req.body.Email || "";
-  if (validator.isEmpty(Email)) {
+  let email = req.body.adminEmail || "";
+  if (validator.isEmpty(email)) {
     return res.status(500).json({
       message: "Validation error: Email is required !",
     });
   } else {
-    if (!validator.isEmail(Email)) {
+    if (!validator.isEmail(email)) {
       return res.status(500).json({
         message: "Validation error: Please Enter Valid Email !",
       });
@@ -16,8 +16,8 @@ exports.checkEmailValidation = (req, res, next) => {
 };
 
 exports.checkEmptyPhone = (req, res, next) => {
-  let Phone = req.body.PhoneNumber || "";
-  if (validator.isEmpty(Phone)) {
+  let phone = req.body.phoneNumber || "";
+  if (validator.isEmpty(phone)) {
     return res.status(500).json({
       message: "Validation error: Please Enter valid Phone !",
     });
