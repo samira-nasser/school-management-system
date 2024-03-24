@@ -4,6 +4,7 @@ var indexRouter = require("./routes/index");
 var studentsRouter = require("./routes/studentRoutes");
 var schoolsRouter = require("./routes/schoolRoutes");
 var classesRouter = require("./routes/classroomRoutes");
+var userRouter = require("./routes/userRoutes");
 const dbConnection = require("./models/dbConnection");
 
 dotenv.config();
@@ -16,6 +17,7 @@ app.use("/", indexRouter);
 app.use("/students", studentsRouter);
 app.use("/schools", schoolsRouter);
 app.use("/classes", classesRouter);
+app.use("/users", userRouter);
 
 app.get("/", (req, res) => {
   res.send("Express + TypeScript Server");
